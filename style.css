@@ -1,0 +1,132 @@
+body {
+    font-family: 'Space Mono';
+    font-size: 24px; /* Font size for form inputs */
+    background-color: hsl(185, 41%, 84%);
+    margin: 0px;
+    padding: 0px;
+    
+}
+.logo{
+    text-align: center;
+    margin-top: 100px;
+
+}
+label{
+    font-size: 10px;
+}
+.main {
+    width: 65%;
+    background-color: hsl(0, 0%, 100%);
+    height: 53vh;
+    margin: 50px auto;
+    padding: 5px;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr; /* Divide into two columns */
+     /* Adjust the gap between columns */
+    border-radius: 20px;
+    
+}
+.second_div{
+    width:90%;
+    background-color: hsl(183, 100%, 15%);
+     margin: 10px; 
+     padding: 10px;
+     border-radius: 20px;
+}
+    @media screen and (min-width: 375px) and (max-width: 600px){
+        .main {
+            grid-template-rows: 1fr 1fr ; /* Switch to two rows */
+            grid-template-columns: 1fr; /* Switch to one column */
+            width: 100%;
+            height: 100vh;
+          
+          
+          
+        }
+        
+        .second_div{
+            width: 87%;
+        }
+
+    }
+
+#bill {
+    
+    
+    padding: 5px 30px; text-align: end; font-size: 24px;
+    background-color:hsl(189, 41%, 97%);
+    border: none;
+    border-radius: 5px;
+}
+#bill:focus{
+    border-color:hsl(120, 100%, 50%);
+}
+.btn {
+    width: 108px;
+    height: 30px;
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(0, 0%, 100%);
+    border: 1px solid transparent; /* Set a transparent border in the normal state */
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s; /* Add transition property */
+    
+    margin-bottom: 5px;
+
+    
+}
+@media screen and (min-width: 375px) and (max-width: 600px){
+    .btn {
+        width: 170px;
+        height: 50px;
+     
+    
+        
+    }
+
+}
+.btn:hover {
+    background-color: hsl(172, 67%, 45%);
+    border-color: hsl(172, 67%, 45%); /* Adjust border color in hover state */
+    color: hsl(183, 100%, 15%);
+}
+.t_amount{
+    display: flex;
+    justify-content:left;
+    gap: 100px;
+    font-size: 10px;
+
+}
+.t_amount img{
+    height: 25px;
+    margin-top: 10px;
+    color:hsl(172, 67%, 45%) ;
+}
+.reset_btn button{
+    margin-top: 50px;
+    background-color:hsl(172, 67%, 45%); ;
+    width: 100%;
+    border: 1px solid transparent;
+    padding: 10px;
+}
+h1{
+    color:hsl(120, 100%, 50%) ;
+    font-size: 25px ;
+    margin-left: 100px;
+}
+#people{
+    padding: 5px 30px; 
+    text-align: end;
+     font-size: 24px;
+       background-color:hsl(189, 41%, 97%);
+       border: none;
+        border-radius: 5px;
+}
+#people:focus{
+    border-color: hsl(120, 100%, 50%); 
+
+}
+p{
+    color: white;
+     margin-right: 10px;
+}
