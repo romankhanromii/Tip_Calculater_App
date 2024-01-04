@@ -16,11 +16,14 @@ function calculateTip() {
   console.log("tipp",tipPercentage)
   let numberOfPeople = parseInt(document.getElementById('people').value);
   console.log(numberOfPeople)
+
   let zeroWarning = document.getElementById('zeroWarning');
   if (numberOfPeople === 0) {
     zeroWarning.style.display = 'inline-block';
+    zeroWarning.classList.add('hidden')
   } else {
     zeroWarning.style.display = 'none';
+    zeroWarning.classList.remove('hidden')
   }
 
   if (numberOfPeople === 0 || isNaN(billAmount) || isNaN(tipPercentage) || isNaN(numberOfPeople)) {
