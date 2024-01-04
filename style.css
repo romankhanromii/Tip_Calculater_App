@@ -90,6 +90,11 @@ label{
     border-color: hsl(172, 67%, 45%); /* Adjust border color in hover state */
     color: hsl(183, 100%, 15%);
 }
+.btn.active{
+    background-color: hsl(172, 77%, 78%);
+    border-color: hsl(172, 67%, 45%); /* Adjust border color in hover state */
+    color: hsl(183, 100%, 15%);
+}
 .t_amount{
     display: flex;
     justify-content:left;

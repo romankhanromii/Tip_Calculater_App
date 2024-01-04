@@ -1,5 +1,5 @@
 
-
+//function of tip calculater
 function calculateTip() {
 
   let billAmount = parseFloat(document.getElementById('bill').value);
@@ -16,11 +16,21 @@ function calculateTip() {
   console.log("tipp",tipPercentage)
   let numberOfPeople = parseInt(document.getElementById('people').value);
   console.log(numberOfPeople)
+  let zeroWarning = document.getElementById('zeroWarning');
   if (numberOfPeople === 0) {
-    alert("Please enter a valid number");
-    numberOfPeople.style.borderColor = 'red';
+    zeroWarning.style.display = 'inline-block';
+  } else {
+    zeroWarning.style.display = 'none';
   }
 
+  if (numberOfPeople === 0 || isNaN(billAmount) || isNaN(tipPercentage) || isNaN(numberOfPeople)) {
+    // If any input is invalid or not filled, clear the displayed values
+    document.querySelector('.tip_calculater').innerText = '0.00';
+    document.querySelector('.per_person_amount').innerText = '0.00';
+    return; // Exit the function early if any input is invalid
+  }
+
+ 
   let tipAmount = billAmount * tipPercentage;
   console.log('tip amount',tipAmount)
   let totalAmountPerPerson = (billAmount + tipAmount) / numberOfPeople;
@@ -32,12 +42,12 @@ function calculateTip() {
 
 
 function resetValues() {
-
+  //make all the three input to empty value
   document.getElementById('bill').value = '';
   document.getElementById('people').value = '';
   document.getElementById('custom-tip').value = '';
 
-
+  //remove the active classlist from the tip
   let tipButtons = document.querySelectorAll('.btn');
   tipButtons.forEach(function (button) {
     button.classList.remove('active');
